@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import {Button} from 'reactstrap';
 
-const NextAndPrevious = () => {
+const NextAndPrevious = ({onClick}) => {
     return ( 
-        <div>
-            <button>Next</button>
-            <button>Previous</button>
+        <div className="button-div">
+            <Button className="left-button" onClick={()=>onClick("previous")}>Previous</Button>
+            <Button className="right-button" onClick={()=>onClick("next")}>Next</Button>
         </div>
      );
 }
